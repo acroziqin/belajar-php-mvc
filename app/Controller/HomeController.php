@@ -2,6 +2,8 @@
 
 namespace KrisnaBeaute\BelajarPhpMvc\Controller;
 
+use KrisnaBeaute\BelajarPhpMvc\App\View;
+
 class HomeController
 {
     function index(): void
@@ -10,7 +12,8 @@ class HomeController
             "title" => "Belanja Skincare",
             "content" => "Selamat berbelanja skincare Krisna Beaute"
         ];
-        echo "HomeController.index()";
+
+        View::render('Home/index', $model);
     }
 
     function hello(): void
